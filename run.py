@@ -1,6 +1,8 @@
 ALPHABET = "ABDEFGHIJKLMNOPQRSTUVWXYZ"
 
 want_to_play = True
+guessed = 0
+missed = 0
 
 while want_to_play:
     word = "SUPER"
@@ -39,29 +41,32 @@ while want_to_play:
         if not new_letter in letters:
             letters += new_letter
 
+    print()
+    print(f"Word: {current_word}")
+    print(f"Mistakes: {mistakes} out of 7")
+    print(f"Added letters: ", end="")
+
+    if len(letters) == 0:
+        print("-")
+    else:
+        print(*letters)
+
+    if word == current_word:
+        print("Congratulations! You guessed the word!")
+        guessed += 1
+    else:
+        print("Sorry, but didn't guess the word.") 
+        missed += 1   
+
+    print(f"The correct word is: {word}") 
+
+
+    play_again = input("Do you want to play again? ")
+    while not(play_again == "yes" or play_again == "no"):
+        play_again = input("Just enter \"Yes\" or \"No\": ").lower()
+    if play_again == "no":
+        want_to_play = False
 print()
-print(f"Word: {current_word}")
-print(f"Mistakes: {mistakes} out of 7")
-print(f"Added letters: ", end="")
-
-if len(letters) == 0:
-    print("-")
-else:
-    print(*letters)
-
-if word == current_word:
-    print("Congratulations! You guessed the word!")
-else:
-    print("Sorry, but didn't guess the word.")    
-
-print(f"The correct word is: {word}") 
-
-
-play_again = input("Do you want to play again?")
-while not(play_again == "yes" or again == "no"):
-    play_again = input("Just enter \"Yes\" or \"No\": ").lower()
-if play_again == "no":
-    want_to_play = False
-
 print("Thank you for your game!")    
+print(f"You guessed {guessed} word, and you missed {missed} words.")
 input("Click Enter to finish the game.")
