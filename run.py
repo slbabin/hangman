@@ -1,4 +1,16 @@
+GAME_NAME = "HANGMAN"
+DEFAULT_NAME = "ANONIMUS"
 ALPHABET = "ABDEFGHIJKLMNOPQRSTUVWXYZ"
+
+x = (39 - len(GAME_NAME)) // 2
+y = 1 if len(GAME_NAME)%2 == 0 else 0
+
+print("* " * 20 + "*")
+print("*" + " " * 40 + "*")
+print("*" + " " * x + GAME_NAME.upper() + " " * (x + y) + "*")
+print("*" + " " * 40 + "*")
+print("* " * 20 + "*")
+print()
 
 want_to_play = True
 guessed = 0
