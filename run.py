@@ -12,6 +12,21 @@ print("*" + " " * 40 + "*")
 print("* " * 20 + "*")
 print()
 
+print(f"Welcome to the game \"{GAME_NAME}\"!\n")
+
+name = input("Enter your name! ")
+
+if not name:
+    name = DEFAULT_NAME
+    
+print(f"Hi {name}, the rules are easy! ")
+print("I'll pick a word and write how many letters in it")
+print("You need to guess a word by entering lettes one by one")
+print("You have 7 tries.")
+print()
+
+
+
 want_to_play = True
 guessed = 0
 missed = 0
