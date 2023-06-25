@@ -1,6 +1,11 @@
 GAME_NAME = "HANGMAN"
 DEFAULT_NAME = "ANONIMUS"
 ALPHABET = "ABDEFGHIJKLMNOPQRSTUVWXYZ"
+FILE_DATA = "words.txt"
+
+want_to_play = True
+guessed = 0
+missed = 0
 
 x = (39 - len(GAME_NAME)) // 2
 y = 1 if len(GAME_NAME)%2 == 0 else 0
@@ -26,11 +31,9 @@ print("You need to guess a word by entering lettes one by one")
 print("You have 7 tries.")
 print()
 
-
-
-want_to_play = True
-guessed = 0
-missed = 0
+file = open(FILE_DATA)
+print(file.read())
+file.close()
 
 while want_to_play:
     word = "SUPER"
@@ -44,7 +47,6 @@ while want_to_play:
         print(f"Mistakes: {mistakes} out of 7")
         print(f"Added letters: ", end="")
         
-
         if len(letters) == 0:
             print("-")
         else:
