@@ -1,3 +1,5 @@
+from random import shuffle
+
 GAME_NAME = "HANGMAN"
 DEFAULT_NAME = "ANONIMUS"
 ALPHABET = "ABDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -31,9 +33,16 @@ print("You need to guess a word by entering lettes one by one")
 print("You have 7 tries.")
 print()
 
+words = [] #Empty list to hold words from a file
 file = open(FILE_DATA)
-print(file.read())
+for line in file:
+    line = line.lower().strip()
+    words.append(line) #Add a word from the file to the end of the list
 file.close()
+
+shuffle(words)
+
+print(words)
 
 while want_to_play:
     word = "SUPER"
@@ -89,7 +98,6 @@ while want_to_play:
         missed += 1   
 
     print(f"The correct word is: {word}") 
-
 
     play_again = input("Do you want to play again? ")
     while not(play_again == "yes" or play_again == "no"):
