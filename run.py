@@ -3,7 +3,7 @@ from sys import exit
 
 GAME_NAME = "HANGMAN"
 DEFAULT_NAME = "ANONIMUS"
-ALPHABET = "ABDEFGHIJKLMNOPQRSTUVWXYZ"
+ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 FILE_DATA = "words.txt"
 HG = '\\'
 
@@ -14,10 +14,10 @@ missed = 0
 x = (39 - len(GAME_NAME)) // 2
 y = 1 if len(GAME_NAME) % 2 == 0 else 0
 
-print("* " * 20 + "*")
-print("*" + " " * 40 + "*")
+print("* " * 20+ "*")
+print("*" + " " * 39 + "*")
 print("*" + " " * x + GAME_NAME.upper() + " " * (x + y) + "*")
-print("*" + " " * 40 + "*")
+print("*" + " " * 39 + "*")
 print("* " * 20 + "*")
 print()
 
@@ -66,10 +66,10 @@ while want_to_play:
 
             print()
             print(f"-------")
-            print(f"|/   {'|'}")
-            print(f"|    {'o'}")
-            print(f"|   {'/'}{'|'}{HG}")
-            print(f"|   {'/'} {HG}")
+            print(f"|/   {'|' if mistakes > 0 else ' '}")
+            print(f"|    {'o' if mistakes > 1 else ' '}")
+            print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}{HG if mistakes > 4 else ' '}")
+            print(f"|   {'/' if mistakes > 5 else ' '} {HG if mistakes > 6 else ' '}")
             print(f"|")
             print(f"|__")
             print()
