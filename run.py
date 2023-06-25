@@ -15,6 +15,7 @@ print()
 print(f"Welcome to the game \"{GAME_NAME}\"!\n")
 
 name = input("Enter your name! ")
+print()
 
 if not name:
     name = DEFAULT_NAME
@@ -34,7 +35,7 @@ missed = 0
 while want_to_play:
     word = "SUPER"
     current_word = "-" * len(word)
-    print(f"The chosen word is: {current_word}\n")
+    print(f"The chosen word consists of: {len(word)} letters.\n")
     mistakes = 0
     letters = ""
     
@@ -79,10 +80,10 @@ while want_to_play:
         print(*letters)
 
     if word == current_word:
-        print("Congratulations! You guessed the word!")
+        print(f"{name}, congratulations! You guessed the word!")
         guessed += 1
     else:
-        print("Sorry, but didn't guess the word.") 
+        print(f"{name}, unfortunately, you didn't guess the word.") 
         missed += 1   
 
     print(f"The correct word is: {word}") 
@@ -94,6 +95,6 @@ while want_to_play:
     if play_again == "no":
         want_to_play = False
 print()
-print("Thank you for your game!")    
+print("Thank you for your game! Below, you can see your results:")    
 print(f"You guessed {guessed} word, and you missed {missed} words.")
 input("Click Enter to finish the game.")
