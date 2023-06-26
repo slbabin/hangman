@@ -48,6 +48,7 @@ def read_file():
 
     shuffle(words)
 
+
 def play_game(name):
     want_to_play = True
     guessed = 0
@@ -127,9 +128,12 @@ def play_game(name):
                 play_again = input("Just enter \"Yes\" or \"No\": ").lower()
             if play_again == "no":
                 want_to_play = False
+            
+    return guessed, missed
+
 print()
 user = greeting_rules()
 read_file()
-play_game(user)
+x, y = play_game(user)
 print("Thank you for your game! Below, you can see your results:")    
-print(f"You guessed {guessed} word, and you missed {missed} words.")
+print(f"You guessed {x} word, and you missed {y} words.")
