@@ -1,13 +1,16 @@
-from random import shuffle
-from sys import exit
+from random import shuffle  # Import the shuffle function from Random module
+from sys import exit  # import function exit from module sys.
 
 GAME_NAME = "HANGMAN"
 DEFAULT_NAME = "ANONIMUS"
 ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 FILE_DATA = "words.txt"
-HG = '\\'
+BS = '\\'
 
 def greeting_rules():
+    """
+    Display the game frame and rules.
+    """
     x = (39 - len(GAME_NAME)) // 2
     y = 1 if len(GAME_NAME) % 2 == 0 else 0
 
@@ -19,11 +22,11 @@ def greeting_rules():
     print()
     print(f"Welcome to the game \"{GAME_NAME}\"!\n")
 
-    name = input("Enter your name! ")
+    name = input("Enter your name! ")  # Prompt for the participant's name.
     print()
 
     if not name:
-        name = DEFAULT_NAME
+        name = DEFAULT_NAME      # If no name entered, display the default name Anonimus.
         
     print(f"Hi {name}, the rules are easy! ")
     print("I'll pick a word and write how many letters in it")
@@ -32,13 +35,16 @@ def greeting_rules():
     print()
     return name
 
-words = [] #Empty list to hold words from a file
+
+words = []  #Empty list to hold words from a file
+
+
 def read_file():
    
     file = open(FILE_DATA)
     for line in file:
-        line = line.lower().strip()
-        words.append(line) #Add a word from the file to the end of the list
+        line = line.lower().strip()  # Setting words to lower case and strip "/n" from the end.
+        words.append(line)  # Add a word from the file to the end of the list
     file.close()
 
     if len(words) == 0:
@@ -58,8 +64,8 @@ def play_game(name):
             print("Unfortunately, no more words in the file!")
 
         else:
-            word = words.pop().upper()  #Gets the last entry from the list and 
-                                        #removes it from the list
+            word = words.pop().upper()  # Gets the last entry from the list and 
+                                        # removes it from the list
             current_word = "-" * len(word)
             print(f"The chosen word consists of: {len(word)} letters.\n")
             mistakes = 0
@@ -71,8 +77,8 @@ def play_game(name):
                 print(f"-------")
                 print(f"|/   {'|' if mistakes > 0 else ' '}")
                 print(f"|    {'o' if mistakes > 1 else ' '}")
-                print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}{HG if mistakes > 4 else ' '}")
-                print(f"|   {'/' if mistakes > 5 else ' '} {HG if mistakes > 6 else ' '}")
+                print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}{BS if mistakes > 4 else ' '}")
+                print(f"|   {'/' if mistakes > 5 else ' '} {BS if mistakes > 6 else ' '}")
                 print(f"|")
                 print(f"|__")
                 print()
@@ -95,7 +101,7 @@ def play_game(name):
 
                 for i in range(len(word)):
                     
-                    if new_letter == word[i]:  # checking if a letter exists in the word
+                    if new_letter == word[i]:  # checking if a letter exists in the word.
                         current_word = current_word[:i] + new_letter + current_word[i + 1:]
                         letter_in_word = True
 
@@ -103,6 +109,15 @@ def play_game(name):
                     mistakes += 1
                 if not new_letter in letters:
                     letters += new_letter
+
+            print()
+            print(f"-------")
+            print(f"|/   {'|' if mistakes > 0 else ' '}")
+            print(f"|    {'o' if mistakes > 1 else ' '}")
+            print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}{BS if mistakes > 4 else ' '}")
+            print(f"|   {'/' if mistakes > 5 else ' '} {BS if mistakes > 6 else ' '}")
+            print(f"|")
+            print(f"|__")                    
 
             print()
             print(f"Word: {current_word}")
@@ -124,14 +139,15 @@ def play_game(name):
             print(f"The correct word is: {word}") 
 
             play_again = input("Do you want to play again? ")
-            while not(play_again == "yes" or play_again == "no"):
+            while not (play_again == "yes" or play_again == "no"):
                 play_again = input("Just enter \"Yes\" or \"No\": ").lower()
             if play_again == "no":
                 want_to_play = False
             
+            print()            
     return guessed, missed
 
-print()
+
 user = greeting_rules()
 read_file()
 x, y = play_game(user)
