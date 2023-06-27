@@ -31,8 +31,8 @@ def greeting_rules():
         name = DEFAULT_NAME
 
     print(f"Hi {name}, the rules are easy! ")
-    print("I'll pick a word and write how many letters in it")
-    print("You need to guess a word by entering lettes one by one")
+    print("I'll pick a word and write how many letters in it.")
+    print("You need to guess a word by entering letters one by one.")
     print("You have 7 tries.")
     print()
     return name
@@ -81,8 +81,8 @@ def play_game(name):
             print("Unfortunately, no more words in the file!")
 
         else:
-            word = words.pop().upper()  # Gets the last entry from the list and
-            # removes it from the list
+            # Gets the last entry from the list and removes it from the list
+            word = words.pop().upper()
             current_word = "-" * len(word)
             print(f"The chosen word consists of: {len(word)} letters.\n")
             mistakes = 0
@@ -116,7 +116,7 @@ def play_game(name):
 
                 if not letter_in_word:
                     mistakes += 1
-                if not new_letter in letters:
+                if new_letter not in letters:
                     letters += new_letter
 
             gallows(mistakes)
