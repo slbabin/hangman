@@ -27,7 +27,8 @@ def greeting_rules():
     print()
 
     if not name:
-        name = DEFAULT_NAME  # If no name entered, display the default name Anonimus.
+        # If no name entered, display the default name Anonimus.
+        name = DEFAULT_NAME
 
     print(f"Hi {name}, the rules are easy! ")
     print("I'll pick a word and write how many letters in it")
@@ -43,8 +44,10 @@ words = []  # Empty list to hold words from a file
 def read_file():
     file = open(FILE_DATA)
     for line in file:
-        line = line.lower().strip()  # Setting words to lower case and strip "/n" from the end.
-        words.append(line)  # Add a word from the file to the end of the list
+        # Setting words to lower case and strip "/n" from the end.
+        line = line.lower().strip()
+        # Add a word from the file to the end of the list
+        words.append(line)
     file.close()
 
     if len(words) == 0:
@@ -54,7 +57,11 @@ def read_file():
 
     shuffle(words)
 
+
 def gallows(mistakes):
+    """
+    Display gallows
+    """
     print(f"-------")
     print(f"|/   {'|' if mistakes > 0 else ' '}")
     print(f"|    {'o' if mistakes > 1 else ' '}")
@@ -63,6 +70,7 @@ def gallows(mistakes):
     print(f"|")
     print(f"|__")
     print()
+
 
 def play_game(name):
     want_to_play = True
@@ -101,8 +109,8 @@ def play_game(name):
                 letter_in_word = False
 
                 for i in range(len(word)):
-
-                    if new_letter == word[i]:  # checking if a letter exists in the word.
+                    # checking if a letter exists in the word.
+                    if new_letter == word[i]:
                         current_word = current_word[:i] + new_letter + current_word[i + 1:]
                         letter_in_word = True
 
@@ -147,4 +155,3 @@ read_file()
 x, y = play_game(user)
 print("Thank you for your game! Below, you can see your results:")
 print(f"You guessed {x} word, and you missed {y} words.")
-
