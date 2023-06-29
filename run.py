@@ -111,7 +111,8 @@ def play_game(name):
                 for i in range(len(word)):
                     # checking if a letter exists in the word.
                     if new_letter == word[i]:
-                        current_word = current_word[:i] + new_letter + current_word[i + 1:]
+                        current_word = current_word[:i] + new_letter + \
+                            current_word[i + 1:]
                         letter_in_word = True
 
                 if not letter_in_word:
@@ -140,7 +141,7 @@ def play_game(name):
 
             print(f"The correct word is: {word}")
 
-            play_again = input("Do you want to play again? ")
+            play_again = input("Do you want to play again? Yes or No? ")
             while not (play_again == "yes" or play_again == "no"):
                 play_again = input("Just enter \"Yes\" or \"No\": ").lower()
             if play_again == "no":
