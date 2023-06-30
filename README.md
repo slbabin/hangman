@@ -23,9 +23,15 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
 - The game selects a random word from the txt file. If the list is empty, show the message and exit the game.  
 
+    ![Screenshot of the Product links section](images/secret-word.jpg) 
+
 - The game dispays empty gallows, current secret word state hidden with dashes, amount of mistakes, and a list of entered letters. 
 
+    ![Screenshot of the Product links section](images/gallows.jpg) 
+
 - The game promts the player to guess a letter. 
+
+    ![Screenshot of the Product links section](images/entered-letters2.jpg) 
 
 - Input validation and error checking
   - The game accepts only a single latin letter. If unsupported symbol or letter is entered, the game prompts to enter only one latin letter.  
