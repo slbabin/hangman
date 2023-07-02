@@ -48,8 +48,25 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
 ## Testing and Validation
 
- __User Actions__
+- The code was tested in the termital by inputing different invalid values, such as numbers or non-latin characters. 
+- Throughout the build of the project, utilized multiple print statements to visualize variable outputs.
+- Validated the code in the PEP8 CI Python Linter with no errors found.
 
+![Screenshot of the Product links section](images/pep8-validation.jpg) 
+
+ __User Actions__
+|  Feature |  Action |  Expected Result | Actual Result |
+|---|---|---|---|
+|  The game greetings |  Lunching the game | The greetings is displayed  | Works as expected  |
+|  The game prompts to enter player's name |  Input a name | The entered name is displayed | Works as expected  |
+|  Display rules of the game |  Input a name | Rules of the game are displyed in the terninal| Works as expected  |
+|  Generate a secret word |  Input a name | A secret word is generated | Works as expected  |
+|  Display the amount of letters in the secret word | Input a name | The amount of lettes in the secret word is shown | Works as expected  | 
+|  Display the gallows |  Input a name | The gallows is displayed | Works as expected  |
+|  The secred word is hidden with dashes |  Input a name | The secred word is hidden | Works as expected  |
+|  Mistakes counter |  Player adds a letter | If the letter is not in the word, the counter incremented by 1 | Works as expected  |
+| Show tried letters |  Player adds a letter | The game displays added letters | Works as expected  |
+| Gallow displays body parts |  Player adds a letter | If the entered letter is not in the word, a body part revealed on the gallows | Works as expected  |
 
 ## Deployment
 
