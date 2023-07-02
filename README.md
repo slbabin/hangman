@@ -45,9 +45,6 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
 ![Screenshot of the Product links section](images/diagram-1.png) 
 
-## Design 
-
-
 
 ## Testing and Validation
 

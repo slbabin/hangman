@@ -65,7 +65,8 @@ def gallows(mistakes):
     print(f"-------")
     print(f"|/   {'|' if mistakes > 0 else ' '}")
     print(f"|    {'o' if mistakes > 1 else ' '}")
-    print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}{BS if mistakes > 4 else ' '}")
+    print(f"|   {'/' if mistakes > 3 else ' '}{'|' if mistakes > 2 else ' '}"
+          f"{BS if mistakes > 4 else ' '}")
     print(f"|   {'/' if mistakes > 5 else ' '} {BS if mistakes > 6 else ' '}")
     print(f"|")
     print(f"|__")
