@@ -55,6 +55,8 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 ![Screenshot of the Product links section](images/pep8-validation.jpg) 
 
  __User Actions__
+
+
 |  Feature |  Action |  Expected Result | Actual Result |
 |---|---|---|---|
 |  The game greetings |  Lunching the game | The greetings is displayed  | Works as expected  |
@@ -67,12 +69,39 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 |  Mistakes counter |  Player adds a letter | If the letter is not in the word, the counter incremented by 1 | Works as expected  |
 | Show tried letters |  Player adds a letter | The game displays added letters | Works as expected  |
 | Gallow displays body parts |  Player adds a letter | If the entered letter is not in the word, a body part revealed on the gallows | Works as expected  |
+| When a player guessed a word or exausted all tries, prompt to play again |  Player guessed a word or exausted all tries | Ask if they want to play again | Works as expected  |
+
+Invalid input handeling 
+
+|  Feature |  Action |  Expected Result | Actual Result |
+|---|---|---|---|
+|  The game accept only one latin character |  Adding non-latin or more than 1 character | The message appears asking to enter just 1 letter | Works as expected  |
+| Prompt to enter "Yes" or "No" |  Player guessed a word or exausted all tries | Display a message to enter only valid input | Works as expected  |
+| Display a message when there are no more words in the file | Player tried all words in the file | Display a message that there are no more words | Works as expected  |
 
 ## Deployment
+1. Login into heroku.com site.
+2. Click on the "New" and then on the "Create a new App".
+3. Enter the app name and choose the region and click "Create app".
+4. Click on the Settings tab to adjust the settings.
+5. Click on the "Config vars" button.
+6. Enter the PORT value into the KEY field and 8000 into the VALUE field. Then click on the "Add" button.
+7. Click Add Buildpacks, select Python in the pop-up window and click Add Buildpacks.
+8. Click Add Buildpacks once again but this time select Node. 
+9. The link to the app can be found in the section Domains.
+10. Click the Deploy tab.
+11. Select the deplyement method GitHub.
+12. Search for the repository and click connect.
+13. Choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changer, or manual deployement. 
+14. Click Deploy branch.
+
+
+
 
 
 ## Technologies Used
-Languages Used
+ - Python -
+ - Heroku 
 
 
 
