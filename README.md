@@ -39,7 +39,10 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
   - If a word is not guessed, and mistakes less than 7, gallows adds a part of the stick man body and the mistakes counter incremented.
   - At the end of the game, the player is asked if they want to play again. They need to enter Yes or No. If a wrong value is entered, the message is displayed that they need to enter the correct value.  
 
-
+## Future features
+- Difficulty levels: Allow players to choose between different difficulty levels, such as easy, medium, and hard. Each level can have a different word length or a limited number of incorrect guesses.
+- Time challenge: Add a time-based mode where players have a limited amount of time to guess the word correctly. This mode can increase the excitement and challenge players to think quickly.
+- Categories or themes: Include a variety of word categories or themes, such as animals, countries, movies, or sports. This adds diversity and makes the game more enjoyable for players with different interests.
 
 ## Progam logic diagram   
 
