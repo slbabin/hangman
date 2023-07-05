@@ -80,6 +80,7 @@ def play_game(name):
     while want_to_play:
         if len(words) == 0:
             print("Unfortunately, no more words in the file!")
+            break
 
         else:
             # Gets the last entry from the list and removes it from the list
