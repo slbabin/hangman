@@ -68,13 +68,13 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 |  Generate a secret word |  Input a name | A secret word is generated | Works as expected  |
 |  Display the amount of letters in the secret word | Input a name | The amount of lettes in the secret word is shown | Works as expected  | 
 |  Display the gallows |  Input a name | The gallows is displayed | Works as expected  |
-|  The secred word is hidden with dashes |  Input a name | The secred word is hidden | Works as expected  |
+|  Hide the secred word with dashes |  Input a name | The secred word is hidden | Works as expected  |
 |  Mistakes counter |  Player adds a letter | If the letter is not in the word, the counter incremented by 1 | Works as expected  |
 | Show tried letters |  Player adds a letter | The game displays added letters | Works as expected  |
 | Gallow displays body parts |  Player adds a letter | If the entered letter is not in the word, a body part revealed on the gallows | Works as expected  |
 | When a player guessed a word or exausted all tries, prompt to play again |  Player guessed a word or exausted all tries | Ask if they want to play again | Works as expected  |
 
-Invalid input handeling 
+__Invalid input handeling__ 
 
 |  Feature |  Action |  Expected Result | Actual Result |
 |---|---|---|---|
@@ -99,17 +99,17 @@ Invalid input handeling
 14. Click Deploy branch.
 
 
-
-
-
 ## Technologies Used
  - Python -
  - Heroku 
 
 
 
-Programs Used
-
+## Programs Used
+- [GitHub:](https://github.com/) Used for version control and to store the projects code after being pushed from GitPod or Codeanywhere.
+- [Codeanywhere:](https://codeanywhere.com/) Codeanywhere is a cloud-based integrated development environment that includes a built-in code editor, a fully-featured development environment for servers and containers, an integrated debugger, and live collaboration tools.
 
 ## Credits
+
+- The code was inspired by the code from this site: [https://it-start.online](https://it-start.online/articles/pishem-igru-viselica-na-python-2).
  
