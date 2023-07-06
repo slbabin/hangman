@@ -16,7 +16,7 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
 - The game prompts the player to enter their name. If no name is entered, the game assigns the name ANONIMUS to the player.
 
-- After the user entered their name, the game displays player's name and the rules of the game. 
+- After the user entered their name, the game displays player's name, and the rules of the game. 
 
     ![Screenshot of the Product links section](images/rules.jpg) 
    
@@ -25,16 +25,16 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
     ![Screenshot of the Product links section](images/secret-word.jpg) 
 
-- The game dispays empty gallows, current secret word state hidden with dashes, amount of mistakes, and a list of entered letters. 
+- The game displays empty gallows, current secret word state hidden with dashes, number of mistakes, and a list of entered letters. 
 
     ![Screenshot of the Product links section](images/gallows.jpg) 
 
-- The game promts the player to guess a letter. 
+- The game prompts the player to guess a letter. 
 
     ![Screenshot of the Product links section](images/entered-letters2.jpg) 
 
 - Input validation and error checking
-  - The game accepts only a single latin letter. If unsupported symbol or letter is entered, the game prompts to enter only one latin letter.  
+  - The game accepts only a single Latin letter. If unsupported symbol or letter is entered, the game prompts to enter only one latin letter.  
   - With each entered letter, the games checks if it exists in the word. If the letter exists, the dash in the hidden word is replaced with this letter.
   - If a word is not guessed, and mistakes less than 7, gallows adds a part of the stick man body and the mistakes counter incremented.
   - At the end of the game, the player is asked if they want to play again. They need to enter Yes or No. If a wrong value is entered, the message is displayed that they need to enter the correct value.  
@@ -44,7 +44,7 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 - Time challenge: Add a time-based mode where players have a limited amount of time to guess the word correctly. This mode can increase the excitement and challenge players to think quickly.
 - Categories or themes: Include a variety of word categories or themes, such as animals, countries, movies, or sports. This adds diversity and makes the game more enjoyable for players with different interests.
 
-## Progam logic  
+## Program logic  
 
 <details>
 <summary>Diagram</summary>
@@ -54,7 +54,7 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 
 ## Testing and Validation
 
-- The code was tested in the termital by inputing different invalid values, such as numbers or non-latin characters. 
+- The code was tested in the terminal by inputting different invalid values, such as numbers or non-latin characters. 
 - Throughout the build of the project, utilized multiple print statements to visualize variable outputs.
 - Validated the code in the PEP8 CI Python Linter with no errors found.
 
