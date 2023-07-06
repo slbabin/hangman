@@ -42,6 +42,9 @@ words = []  # Empty list to hold words from a file
 
 
 def read_file():
+    """
+    Open and read the file
+    """
     file = open(FILE_DATA)
     for line in file:
         # Setting words to lower case and strip "/n" from the end.
@@ -60,7 +63,7 @@ def read_file():
 
 def gallows(mistakes):
     """
-    Display gallows
+    Display gallows and add body parts based on the amount of mistakes
     """
     print(f"-------")
     print(f"|/   {'|' if mistakes > 0 else ' '}")
@@ -78,12 +81,12 @@ def play_game(name):
     guessed = 0
     missed = 0
     while want_to_play:
-        if len(words) == 0:
+        if len(words) == 0:  # Verify if the words list was not exausted.
             print("Unfortunately, no more words in the file!")
             break
 
         else:
-            # Gets the last entry from the list and removes it from the list
+            # Gets the last entry from the list and removes it from the list.
             word = words.pop().upper()
             current_word = "-" * len(word)
             print(f"The chosen word consists of: {len(word)} letters.\n")
@@ -96,7 +99,7 @@ def play_game(name):
                 print()
                 print(f"Word: {current_word}")
                 print(f"Mistakes: {mistakes} out of 7")
-                print(f"Letters you tried: ", end="")
+                print(f"Letters you tried: ", end="")  # display tried letters
 
                 if len(letters) == 0:
                     print("-")
@@ -114,15 +117,15 @@ def play_game(name):
                     # checking if a letter exists in the word.
                     if new_letter == word[i]:
                         current_word = current_word[:i] + new_letter + \
-                            current_word[i + 1:]
+                            current_word[i + 1:]  # Replace dashes with letters
                         letter_in_word = True
 
-                if not letter_in_word:
+                if not letter_in_word:  # increase mistakes counter.
                     mistakes += 1
                 if new_letter not in letters:
                     letters += new_letter
 
-            gallows(mistakes)
+            gallows(mistakes)  # Display the final gallows state.
 
             print()
             print(f"Word: {current_word}")

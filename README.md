@@ -44,9 +44,12 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 - Time challenge: Add a time-based mode where players have a limited amount of time to guess the word correctly. This mode can increase the excitement and challenge players to think quickly.
 - Categories or themes: Include a variety of word categories or themes, such as animals, countries, movies, or sports. This adds diversity and makes the game more enjoyable for players with different interests.
 
-## Progam logic diagram   
+## Progam logic  
 
-![Screenshot of the Product links section](images/diagram-1.png) 
+<details>
+<summary>Diagram</summary>
+<img src="images/diagram-1.png">
+</details>
 
 
 ## Testing and Validation

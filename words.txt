@@ -1,2 +1,10 @@
-super 
-bread
+Elephant
+Computer
+Sunshine
+Butterfly
+Chocolate
+Mountain
+Guitar
+Rainbow
+Dolphin
+Watermelon
