@@ -11,27 +11,27 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 ## Features
 - The game start with the generated banner and greetings.
 
-    ![Screenshot of the Product links section](images/greeting.jpg) 
+    ![Screenshot of the Greetings section](images/greeting.jpg) 
 
 
 - The game prompts the player to enter their name. If no name is entered, the game assigns the name ANONIMUS to the player.
 
 - After the user entered their name, the game displays player's name, and the rules of the game. 
 
-    ![Screenshot of the Product links section](images/rules.jpg) 
+    ![Screenshot of the Rules section](images/rules.jpg) 
    
 
 - The game selects a random word from the txt file. If the list is empty, show the message and exit the game.  
 
-    ![Screenshot of the Product links section](images/secret-word.jpg) 
+    ![Screenshot of the hidden word section](images/secret-word.jpg) 
 
 - The game displays empty gallows, current secret word state hidden with dashes, number of mistakes, and a list of entered letters. 
 
-    ![Screenshot of the Product links section](images/gallows.jpg) 
+    ![Screenshot of gallows](images/gallows.jpg) 
 
 - The game prompts the player to guess a letter. 
 
-    ![Screenshot of the Product links section](images/entered-letters2.jpg) 
+    ![Screenshot of the letter prompt section](images/entered-letters2.jpg) 
 
 - Input validation and error checking
   - The game accepts only a single Latin letter. If unsupported symbol or letter is entered, the game prompts to enter only one latin letter.  
@@ -58,7 +58,7 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 - Throughout the build of the project, utilized multiple print statements to visualize variable outputs.
 - Validated the code in the PEP8 CI Python Linter with no errors found.
 
-![Screenshot of the Product links section](images/pep8-validation.jpg) 
+    ![Screenshot of the Product links section](images/pep8-validation.jpg) 
 
  __User Actions__
 
