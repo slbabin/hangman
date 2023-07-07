@@ -74,7 +74,7 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
 |  Hide the secred word with dashes |  Input a name | The secred word is hidden | Works as expected  |
 |  Mistakes counter |  Player adds a letter | If the letter is not in the word, the counter incremented by 1 | Works as expected  |
 | Show tried letters |  Player adds a letter | The game displays added letters | Works as expected  |
-| Gallow displays body parts |  Player adds a letter | If the entered letter is not in the word, a body part revealed on the gallows | Works as expected  |
+| Gallows displays body parts |  Player adds a letter | If the entered letter is not in the word, a body part revealed on the gallows | Works as expected  |
 | When a player guessed a word or exausted all tries, prompt to play again |  Player guessed a word or exausted all tries | Ask if they want to play again | Works as expected  |
 
 __Invalid input handeling__ 
@@ -84,6 +84,9 @@ __Invalid input handeling__
 |  The game accept only one latin character |  Adding non-latin or more than 1 character | The message appears asking to enter just 1 letter | Works as expected  |
 | Prompt to enter "Yes" or "No" |  Player guessed a word or exausted all tries | Display a message to enter only valid input | Works as expected  |
 | Display a message when there are no more words in the file | Player tried all words in the file | Display a message that there are no more words | Works as expected  |
+
+## Bugs
+- If no words left in the file, the game would run into a loop, continuasly displaying the message that there were no word in the file. This issue was fixed by adding a break statement. 
 
 ## Deployment
 1. Login into heroku.com site.
@@ -103,9 +106,8 @@ __Invalid input handeling__
 
 
 ## Technologies Used
- - Python -
- - Heroku 
-
+ - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+ - [Heroku]https://en.wikipedia.org/wiki/Heroku()
 
 
 ## Programs Used
