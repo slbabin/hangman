@@ -76,7 +76,7 @@ def gallows(mistakes):
     print()
 
 
-def game_status(current_word, mistakes):
+def game_results(current_word, mistakes):
     print()
     print(f"Word: {current_word}")
     print(f"Mistakes: {mistakes} out of 7")
@@ -103,7 +103,7 @@ def play_game(name):
             while not (word == current_word or mistakes > 6):
 
                 gallows(mistakes)
-                game_status(current_word, mistakes)
+                game_results(current_word, mistakes)
 
                 if len(letters) == 0:
                     print("-")
@@ -130,7 +130,7 @@ def play_game(name):
                     letters += new_letter
 
             gallows(mistakes)  # Display the final gallows state.
-            game_status(current_word, mistakes)
+            game_results(current_word, mistakes)
 
             if len(letters) == 0:
                 print("-")
