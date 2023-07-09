@@ -111,7 +111,7 @@ __Invalid input handeling__
 
 ## Technologies Used
  - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
- - [Heroku]https://en.wikipedia.org/wiki/Heroku()
+ - [Heroku](https://en.wikipedia.org/wiki/Heroku)
 
 
 ## Programs Used
