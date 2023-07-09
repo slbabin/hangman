@@ -21,9 +21,13 @@ The live version of this game is located [here](https://hangman-1-5c8273b47be1.h
     ![Screenshot of the Rules section](images/rules.jpg) 
    
 
-- The game selects a random word from the txt file. If the list is empty, show the message and exit the game.  
+- The game selects a random word from the txt file.  
 
     ![Screenshot of the hidden word section](images/secret-word.jpg) 
+
+- If the list is empty, show the message and exit the game. 
+
+    ![Screenshot of the hidden word section](images/no-words-left.jpg)
 
 - The game displays empty gallows, current secret word state hidden with dashes, number of mistakes, and a list of entered letters. 
 
