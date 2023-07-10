@@ -27,7 +27,7 @@ def greeting_rules():
     print()
 
     if not name:
-        # If no name entered, display the default name Anonimus.
+        # If no name is entered, display the default name Anonimus.
         name = DEFAULT_NAME
 
     print(f"Hi {name}, the rules are easy! ")
